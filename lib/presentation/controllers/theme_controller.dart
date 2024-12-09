@@ -1,20 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ThemeController extends ChangeNotifier{
+class ThemeController extends ValueNotifier<bool> {
+  ThemeController() : super(false);
 
-
-bool isDarkTheme = false;
-
-void toggleTheme(){
-
-isDarkTheme  = !isDarkTheme;
-
-notifyListeners();
-
-}
-
-
-
-
-
+  void toggleTheme() {
+    value = !value;
+  }
 }
